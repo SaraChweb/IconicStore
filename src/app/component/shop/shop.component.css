@@ -212,3 +212,7 @@
     border-radius: 4px;
     font-weight: 800;
 }
+rating {
+    color: gold;
+    font-size: 20px;
+}

@@ -5,6 +5,43 @@
     <p>Save up to 70% off!</p>
 </section>
 <section id="product1" class="section-p1">
+    <div class="pro-container">
+        <div class="pro"*ngFor="let product of productLists ">
+            <img src={{product.image}} alt="" height="280">
+            <div class="des">
+                <h5>{{product.name}}</h5>
+                <!-- star rating -->
+                <div>
+                    <!-- <ngb-rating [max]="5" [(rate)]="ratingcount" [readonly]="false"
+                    (click)="getRating()" [formControl]="ratingcontrol"></ngb-rating> -->
+                   
+                   <h5>The avarage rating from {{ratingcount}} users is {{avarageRating}}.</h5>
+                </div>
+                <h4>{{product.price | currency : 'USD'}}</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
+        </div>
+        
+    </div>
+</section>
+
+<section id="pagination" class="section-p1">
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#"><i class="fa fa-angle-double-right"></i></a>
+</section>
+
+
+<app-footer></app-footer>
+        
+
+<!-- <app-header></app-header>
+
+<section id="page-header">
+    <h2>#stayhome</h2>
+    <p>Save up to 70% off!</p>
+</section>
+<section id="product1" class="section-p1">
     <div class="pro-container" (click)="goToSingleProduct()">
         <div class="pro">
             <img src="/assets/img/img_10.png" alt="" height="280">
@@ -17,6 +54,7 @@
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                 </div>
+                
                 <h4>350$</h4>
             </div>
             <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
@@ -255,4 +293,4 @@
 </section>
 
 
-<app-footer></app-footer>
+<app-footer></app-footer> -->
