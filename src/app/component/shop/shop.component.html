@@ -5,18 +5,15 @@
     <p>Save up to 70% off!</p>
 </section>
 <section id="product1" class="section-p1">
-    <div class="pro-container">
+    <div class="pro-container"(click)="goToSingleProduct()">
         <div class="pro"*ngFor="let product of productLists ">
             <img src={{product.image}} alt="" height="280">
             <div class="des">
                 <h5>{{product.name}}</h5>
                 <!-- star rating -->
                 <div>
-                    <!-- <ngb-rating [max]="5" [(rate)]="ratingcount" [readonly]="false"
-                    (click)="getRating()" [formControl]="ratingcontrol"></ngb-rating> -->
-                   
-                   <h5>The avarage rating from {{ratingcount}} users is {{avarageRating}}.</h5>
-                </div>
+                    <app-star-review></app-star-review>
+              </div>
                 <h4>{{product.price | currency : 'USD'}}</h4>
             </div>
             <a href="#"><i class="fa fa-shopping-cart cart"></i></a>

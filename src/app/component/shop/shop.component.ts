@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductModel } from 'src/app/models/products';
-import { ProductsService } from './services/products.service';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-shop',
@@ -13,10 +11,7 @@ import { ProductsService } from './services/products.service';
 
   export class ShopComponent{
     title = 'AngularComponent';
-    ratingcount = 0;
-    totalrating = 0;
-    avarageRating : any ;
-    ratingcontrol = new FormControl(0);
+    
     productList!: ProductModel[];
     productLists: ProductModel[]=[];
 
@@ -28,12 +23,7 @@ import { ProductsService } from './services/products.service';
     this.router.navigate(['/singleProduct'])
 
     }
-    getRating(){
-      this.ratingcount++;
-      this.totalrating+=this.ratingcontrol?.value || 0;
-      console.log(this.ratingcontrol.value);
-      this.avarageRating = (this.totalrating / this.ratingcount).toFixed(2);  
-    }
+   
 
     getProducts(){
       this.service.displayAllProducts().subscribe({
@@ -47,4 +37,5 @@ import { ProductsService } from './services/products.service';
       })
     
     }
+
 }

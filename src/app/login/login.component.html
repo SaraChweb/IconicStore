@@ -1,0 +1,64 @@
+<!-- Create login form (reactiveform) and valided it-->
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <h1 class="primary">LOGIN</h1>
+          <div class="container">
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Username</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="username"
+                  formControlName="username"
+                />
+                <span
+                  class="text-danger"
+                  *ngIf="
+                    loginForm.controls['username'].dirty &&
+                    loginForm.hasError('required', 'username')
+                  "
+                >
+                  Username is required!</span
+                >
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="password"
+                  formControlName="password"
+                />
+                <span
+                  class="text-danger"
+                  *ngIf="
+                    loginForm.controls['password'].dirty &&
+                    loginForm.hasError('required', 'password')
+                  "
+                >
+                  Password is required!</span
+                >
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary mb-2"
+                [disabled]="!loginForm.valid"
+              >
+                LOGIN
+              </button>
+            </form>
+            <a routerLink="/register-user">New User? Click to register!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

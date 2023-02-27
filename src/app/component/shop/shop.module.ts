@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ShopRoutingModule } from './shop-routing.module';
 import { FooterModule } from '../footer/footer.module';
 import { HeaderModule } from '../header/header.module';
-import { ProductsService } from './services/products.service';
+import { ProductsService } from '../../services/products.service';
 import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 
 

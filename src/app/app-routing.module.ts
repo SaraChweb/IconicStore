@@ -6,43 +6,53 @@ import { CartComponent } from './component/cart/cart.component';
 import { HomeComponent } from './component/home/home.component';
 import { ShopComponent } from './component/shop/shop.component';
 import { SingleProductComponent } from './component/single-product/single-product.component';
+import { AuthGuard } from './guard/auth.guard';
+import { LoginComponent } from './login/login.component';
 import { PaymentComponent } from './payment/payment.component';
+import { RegisterUserComponent } from './register-user/register-user.component';
 
 const routes: Routes = [
-
+{path:'',component:HomeComponent,canActivate:[AuthGuard]},
 {
-    path: '',
-    component: HomeComponent
+    path: '',redirectTo: 'login',pathMatch:'full'
   },
-
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'register-user',
+    component: RegisterUserComponent
+  },
+  {path:'',component:HomeComponent,canActivate:[AuthGuard]},
   {
     path: 'shop',
-    component: ShopComponent
+    component:ShopComponent,canActivate:[AuthGuard]
   },
 
 {
     path: 'blog',
-    component: BlogComponent
+    component: BlogComponent,canActivate:[AuthGuard]
   },
 
   {
     path: 'about',
-    component: AboutComponent
+    component: AboutComponent,canActivate:[AuthGuard]
   },
 
   {
     path: 'cart',
-    component: CartComponent
+    component: CartComponent,canActivate:[AuthGuard]
   },
 
   {
     path: 'singleProduct',
-    component: SingleProductComponent
+    component: SingleProductComponent,canActivate:[AuthGuard]
   },
 
 {
     path: 'payment',
-    component: PaymentComponent
+    component: PaymentComponent,canActivate:[AuthGuard]
   }
 
 

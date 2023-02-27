@@ -14,10 +14,10 @@ import { RegisterUserComponent } from './register-user/register-user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PaymentComponent } from './payment/payment.component';
 import { ShopComponent } from './component/shop/shop.component';
-import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
-
 import { HttpClientModule } from '@angular/common/http';
-import { ProductsService } from './component/shop/services/products.service';
+import { ProductsService } from './services/products.service';
+import { StarReviewComponent } from './component/star-review/star-review.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -30,7 +30,9 @@ import { ProductsService } from './component/shop/services/products.service';
     SingleProductComponent,
     RegisterUserComponent,
     PaymentComponent,
-    ShopComponent
+    ShopComponent,
+    StarReviewComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,6 @@ import { ProductsService } from './component/shop/services/products.service';
     FooterModule,
     FormsModule,
     HttpClientModule,
-    NgbRatingModule,
     ReactiveFormsModule,
   
   ],
