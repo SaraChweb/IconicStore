@@ -2,6 +2,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    background: #E3E6F3;
 }
 
 footer .col {

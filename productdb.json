@@ -12,11 +12,11 @@
       "name": "Prada Bag",
       "price": "455"
     },
-    {
-      "id": 3,
-      "image": "/assets/img/img_10.png",
-      "name": "Guess Bag",
-      "price": "230"
+    {  
+      "id": 3,  
+      "image":"/assets/img/guess-black.webp",
+      "name": "Guess Bag",  
+      "price": "230"  
     },
     {
       "id": 4,
@@ -96,21 +96,41 @@
       "name": "Valentino Bag",
       "price": "460"
     }
-  ],
-  "users": [
-    {
-      "id": "12",
-      "name": "yllka",
-      "lastname": "kadi",
-      "email": "yllkakadi@hotmail.com",
-      "password": "12345678"
-    },
-    {
-      "id": "atika",
-      "name": "Atika",
-      "lastname": "Kadi",
-      "email": "atika.kadi@chweb.it",
-      "password": "12345678"
+    ,
+    {  
+      "id": 12,  
+      "image":"/assets/img/img_20.png",
+      "name": "Valentino Bag",  
+      "price": "1300"  
     }
+    ,
+    {  
+      "id": 13,  
+      "image":"/assets/img/img_23.png",
+      "name": "Louis Vuitton",  
+      "price": "2300"  
+    }
+    ,
+    {  
+      "id": 14,  
+      "image":"/assets/img/img_24.png",
+      "name": "Prada Bag",  
+      "price": "800"  
+    }
+    ,
+   
+    {  
+      "id": 15,  
+      "image":"/assets/img/guess.webp",
+      "name": "Guess Bag",  
+      "price": "460"  
+    },
+    {  
+      "id": 16,  
+      "image":"/assets/img/img_26.png",
+      "name": "Valentino Bag",  
+      "price": "460"  
+    } 
+   
   ]
 }

@@ -18,9 +18,15 @@ import { ProductsService } from '../../services/products.service';
     constructor(public router: Router,private service : ProductsService){}
     ngOnInit(){
       this.getProducts()
-    }
-    goToSingleProduct() {
-    this.router.navigate(['/singleProduct'])
+  }
+  
+    goToSingleProduct(id:number) {
+    this.router.navigate(['/singleProduct', id])
+  }
+  
+  goToCart() {
+    this.router.navigate(['/cart'])   
+  }
 
     }
    

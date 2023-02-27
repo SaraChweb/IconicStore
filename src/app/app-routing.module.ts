@@ -9,12 +9,15 @@ import { SingleProductComponent } from './component/single-product/single-produc
 import { AuthGuard } from './guard/auth.guard';
 import { LoginComponent } from './login/login.component';
 import { PaymentComponent } from './payment/payment.component';
-import { RegisterUserComponent } from './register-user/register-user.component';
+import { BlogLVComponent } from './component/blog-lv/blog-lv.component';
+import { BlogPradaComponent } from './component/blog-prada/blog-prada.component';
+import { BlogGuessComponent } from './component/blog-guess/blog-guess.component';
+import { BlogValentinoComponent } from './component/blog-valentino/blog-valentino.component';
 
 const routes: Routes = [
-{path:'',component:HomeComponent,canActivate:[AuthGuard]},
-{
-    path: '',redirectTo: 'login',pathMatch:'full'
+  {
+    path: '',
+    component: HomeComponent,
   },
   {
     path: 'login',
@@ -28,34 +31,53 @@ const routes: Routes = [
   {
     path: 'shop',
     component:ShopComponent,canActivate:[AuthGuard]
+    component: ShopComponent,
   },
 
-{
+  {
     path: 'blog',
-    component: BlogComponent,canActivate:[AuthGuard]
+    component: BlogComponent,
   },
 
   {
     path: 'about',
-    component: AboutComponent,canActivate:[AuthGuard]
+    component: AboutComponent,
   },
 
   {
     path: 'cart',
-    component: CartComponent,canActivate:[AuthGuard]
+    component: CartComponent,
   },
 
   {
-    path: 'singleProduct',
-    component: SingleProductComponent,canActivate:[AuthGuard]
+    path: 'singleProduct/:id',
+    component: SingleProductComponent,
   },
 
-{
+  {
     path: 'payment',
-    component: PaymentComponent,canActivate:[AuthGuard]
+    component: PaymentComponent,
+  },
+
+  {
+    path: 'blogLV',
+    component: BlogLVComponent,
+  },
+
+  {
+    path: 'blogPrada',
+    component: BlogPradaComponent,
+  },
+
+  {
+    path: 'blogGuess',
+    component: BlogGuessComponent,
+  },
+
+  {
+    path: 'blogValentino',
+    component: BlogValentinoComponent,
   }
-
-
 ];
 
 @NgModule({

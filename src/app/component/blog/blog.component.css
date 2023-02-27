@@ -1,7 +1,8 @@
 #page-header {
-    background-image: url('/assets/img/Beautiful.jpg');
-    width: 98.5%;
-    height: 40vh;
+    background-image: url('/assets/img/book.jpg');
+    width: 100%;
+    height: 50vh;
+    background-position: top 80% right 0;
     background-size: cover;
     justify-content: center;
     text-align: center;
@@ -12,7 +13,8 @@
 
 #page-header h3,h5 { 
 
-    color: #FFFFFF;
+    color: #ffffff;
+    font-weight: 2000;
 
 }
 
@@ -35,7 +37,7 @@
 
 #blog img {
     width: 100%;
-    height: 300px;
+    height: 175px;
     object-fit: cover;
 }
 
