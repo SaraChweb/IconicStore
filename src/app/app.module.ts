@@ -14,10 +14,12 @@ import { RegisterUserComponent } from './register-user/register-user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PaymentComponent } from './payment/payment.component';
 import { ShopComponent } from './component/shop/shop.component';
-import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
-
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsService } from './component/shop/services/products.service';
+import { BlogLVComponent } from './component/blog-lv/blog-lv.component';
+import { BlogPradaComponent } from './component/blog-prada/blog-prada.component';
+import { BlogGuessComponent } from './component/blog-guess/blog-guess.component';
+import { BlogValentinoComponent } from './component/blog-valentino/blog-valentino.component';
 
 
 @NgModule({
@@ -30,7 +32,11 @@ import { ProductsService } from './component/shop/services/products.service';
     SingleProductComponent,
     RegisterUserComponent,
     PaymentComponent,
-    ShopComponent
+    ShopComponent,
+    BlogLVComponent,
+    BlogPradaComponent,
+    BlogGuessComponent,
+    BlogValentinoComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +45,6 @@ import { ProductsService } from './component/shop/services/products.service';
     FooterModule,
     FormsModule,
     HttpClientModule,
-    NgbRatingModule,
     ReactiveFormsModule,
   
   ],

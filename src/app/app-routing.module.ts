@@ -7,45 +7,66 @@ import { HomeComponent } from './component/home/home.component';
 import { ShopComponent } from './component/shop/shop.component';
 import { SingleProductComponent } from './component/single-product/single-product.component';
 import { PaymentComponent } from './payment/payment.component';
+import { BlogLVComponent } from './component/blog-lv/blog-lv.component';
+import { BlogPradaComponent } from './component/blog-prada/blog-prada.component';
+import { BlogGuessComponent } from './component/blog-guess/blog-guess.component';
+import { BlogValentinoComponent } from './component/blog-valentino/blog-valentino.component';
 
 const routes: Routes = [
-
-{
+  {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
   },
 
   {
     path: 'shop',
-    component: ShopComponent
+    component: ShopComponent,
   },
 
-{
+  {
     path: 'blog',
-    component: BlogComponent
+    component: BlogComponent,
   },
 
   {
     path: 'about',
-    component: AboutComponent
+    component: AboutComponent,
   },
 
   {
     path: 'cart',
-    component: CartComponent
+    component: CartComponent,
   },
 
   {
-    path: 'singleProduct',
-    component: SingleProductComponent
+    path: 'singleProduct/:id',
+    component: SingleProductComponent,
   },
 
-{
+  {
     path: 'payment',
-    component: PaymentComponent
+    component: PaymentComponent,
+  },
+
+  {
+    path: 'blogLV',
+    component: BlogLVComponent,
+  },
+
+  {
+    path: 'blogPrada',
+    component: BlogPradaComponent,
+  },
+
+  {
+    path: 'blogGuess',
+    component: BlogGuessComponent,
+  },
+
+  {
+    path: 'blogValentino',
+    component: BlogValentinoComponent,
   }
-
-
 ];
 
 @NgModule({

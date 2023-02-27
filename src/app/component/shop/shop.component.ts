@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductModel } from 'src/app/models/products';
 import { ProductsService } from './services/products.service';
 
@@ -23,11 +22,16 @@ import { ProductsService } from './services/products.service';
     constructor(public router: Router,private service : ProductsService){}
     ngOnInit(){
       this.getProducts()
-    }
-    goToSingleProduct() {
-    this.router.navigate(['/singleProduct'])
+  }
+  
+    goToSingleProduct(id:number) {
+    this.router.navigate(['/singleProduct', id])
+  }
+  
+  goToCart() {
+    this.router.navigate(['/cart'])   
+  }
 
-    }
     getRating(){
       this.ratingcount++;
       this.totalrating+=this.ratingcontrol?.value || 0;

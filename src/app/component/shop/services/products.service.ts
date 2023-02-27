@@ -8,25 +8,27 @@ import { ProductModel } from '../../../models/products';
   providedIn: 'root',
 })
 export class ProductsService {
-  private myApi: string;
   private products: BehaviorSubject<ProductModel[]> = new BehaviorSubject<
     ProductModel[]
   >([]);
   $products: Observable<ProductModel[]> = this.products.asObservable();
   //   importDataProduct = JSON.stringify();
   //   productData: ProductModel[];
+  cartProducts: any[] = [];
   constructor(private http: HttpClient) {
     // this.productData = JSON.parse(this.importDataProduct);
-    this.myApi = environment.api + '/products/';
   }
 
-  
-//shfaq te dhena 
-  displayAllProducts():Observable<ProductModel[]>{
-    return this.http.get<ProductModel[]>(this.myApi);
+  //shfaq te dhena
+  displayAllProducts(): Observable<ProductModel[]> {
+    let api = environment.api + 'users/getAllProducts';
+    return this.http.get<ProductModel[]>(api);
   }
 
-  
+  getProductById(id:number): Observable<ProductModel> {
+    let api = environment.api + 'users/getProductById/' + id;
+    return this.http.get<ProductModel>(api);
+  }
   //   getProducts(): Observable<ProductModel[]> {
   //     return of(this.productData);
   //   }
